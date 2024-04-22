@@ -4,7 +4,7 @@ import os
 import time
 
 
-def downloadVideo(playlist_videos, genre):
+def downloadPlaylistAsAudio(playlist_videos, genre):
     count1 = 0
     count2 = 0
     for url in playlist_videos:
@@ -27,9 +27,6 @@ def downloadVideo(playlist_videos, genre):
 
         count1 += 1
 
-
-
-
 def extract_urls(playlist):
     urls = []
 
@@ -40,8 +37,11 @@ def extract_urls(playlist):
     return urls
 
 
-playlist = 'https://www.youtube.com/watch?v=kXYiU_JCYtU&list=PLyORnIW1xT6wFALM5dZlkFhOULbToFok3'
-pl_urls = extract_urls(playlist)
-downloadVideo(pl_urls, 'rock')
+def run_scraper(playlist_url, genre):
+    pl_urls = extract_urls(playlist_url)
+    downloadPlaylistAsAudio(pl_urls, genre)
+
+
+run_scraper('https://www.youtube.com/watch?v=XXYlFuWEuKI&list=PLMC9KNkIncKtPzgY-5rmhvj7fax8fdxoj', 'pop')
 
 

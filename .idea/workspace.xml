@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35b53b72-4aac-4b95-9899-6e95c52a1767" name="Changes" comment="Added playlist scraping functionality">
-      <change afterPath="$PROJECT_DIR$/librosa_test.py" afterDir="false" />
+    <list default="true" id="35b53b72-4aac-4b95-9899-6e95c52a1767" name="Changes" comment="Added rock and country playlists">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/librosa_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/librosa_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playlist_scraping.py" beforeDir="false" afterPath="$PROJECT_DIR$/playlist_scraping.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +52,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.librosa_test.executor": "Run",
     "Python.playlist_scraping.executor": "Run",
     "Python.test.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -105,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713808427306</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added rock and country playlists">
+      <option name="closed" value="true" />
+      <created>1713811245344</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713811245344</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,6 +132,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="more changes" />
     <MESSAGE value="Added playlist scraping functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added playlist scraping functionality" />
+    <MESSAGE value="Added rock and country playlists" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added rock and country playlists" />
   </component>
 </project>

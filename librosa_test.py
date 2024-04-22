@@ -1,19 +1,18 @@
 import librosa
-
-import librosa_test
-
-# 1. Get the file path to an included audio example
-filename = librosa.example('nutcracker')
-
+import numpy as np
+from scipy import signal
 
 # 2. Load the audio as a waveform `y`
 #    Store the sampling rate as `sr`
-y, sr = librosa.load(filename)
+y, sr = librosa.load('rock/rock_0.mp3', mono=False)
 
-# 3. Run the default beat tracker
-tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)
+D_stereo = librosa.stft(y)
+S_stereo = np.abs(D_stereo)
 
-print('Estimated tempo: {:.2f} beats per minute'.format(tempo))
+# Get the default Fourier frequencies
+freqs = librosa.fft_frequencies(sr=sr)
 
-# 4. Convert the frame indices of beat events into timestamps
-beat_times = librosa.frames_to_time(beat_frames, sr=sr)
+# We'll interpolate the first five harmonics of each frequency
+harmonics = [1, 2, 3, 4, 5]
+
+S_harmonics = librosa.interp_harmonics(S_stereo, freqs=freqs, h_range=harmonics)
