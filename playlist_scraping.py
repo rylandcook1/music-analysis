@@ -1,17 +1,16 @@
-import time
-
 from moviepy.video.io.VideoFileClip import VideoFileClip
 from pytube import YouTube, Playlist
 import os
+import time
 
 
-def downloadVideo(playlist_videos):
+def downloadVideo(playlist_videos, genre):
     count1 = 0
     count2 = 0
     for url in playlist_videos:
         yt = YouTube(url)
         yt.streams.filter(progressive=True, file_extension='mp4').order_by('resolution').desc().first().download()
-        new_name = 'file_' + str(count1)
+        new_name = genre + '_' + str(count1)
         os.rename(yt.streams.first().default_filename, new_name + '.mp4')
 
         # Load the mp4 file
@@ -23,12 +22,12 @@ def downloadVideo(playlist_videos):
         video = video.subclip(start, end)
         video.audio.write_audiofile(new_name + '.mp3')
 
+        video.close()
+        os.remove(new_name + '.mp4')
+
         count1 += 1
 
-    time.sleep(5)
-    for i in playlist_videos:
-        os.remove('file_' + str(count2) + '.mp4')
-        count2 += 1
+
 
 
 def extract_urls(playlist):
@@ -41,6 +40,8 @@ def extract_urls(playlist):
     return urls
 
 
-playlist = 'https://www.youtube.com/watch?v=lvhHZTlMKRU&list=PLXBNvqGzerDu1v7RsikFmN_XJCva5AAD-'
+playlist = 'https://www.youtube.com/watch?v=kXYiU_JCYtU&list=PLyORnIW1xT6wFALM5dZlkFhOULbToFok3'
 pl_urls = extract_urls(playlist)
-downloadVideo(pl_urls)
+downloadVideo(pl_urls, 'rock')
+
+
