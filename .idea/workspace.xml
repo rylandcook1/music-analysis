@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35b53b72-4aac-4b95-9899-6e95c52a1767" name="Changes" comment="Added playlist scraping functionality">
-      <change afterPath="$PROJECT_DIR$/librosa_test.py" afterDir="false" />
+    <list default="true" id="35b53b72-4aac-4b95-9899-6e95c52a1767" name="Changes" comment="a first attempt with ANN using the MNIST dataset">
+      <change afterPath="$PROJECT_DIR$/testingPyTorch/using_ann.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlist_scraping.py" beforeDir="false" afterPath="$PROJECT_DIR$/playlist_scraping.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedforwardnet.pth" beforeDir="false" afterPath="$PROJECT_DIR$/testingPyTorch/feedforwardnet.pth" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first_ann.py" beforeDir="false" afterPath="$PROJECT_DIR$/testingPyTorch/first_ann.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,23 +54,53 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.playlist_scraping.executor": "Run",
+    "Python.first_ann.executor": "Run",
+    "Python.pyTorch_and_torchaudio.executor": "Debug",
     "Python.test.executor": "Run",
+    "Python.using_ann.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "nathaen"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\CookRyland\PycharmProjects\music-anaylsis\rock" />
-      <recent name="C:\Users\CookRyland\PycharmProjects\music-anaylsis\country" />
+      <recent name="C:\Users\WantaNathaen\OneDrive - University of Wisconsin-Stout\Documents\MSCS 335\music-analysis1\testingPyTorch" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="first_ann" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="music-anaylsis" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\WantaNathaen\OneDrive - University of Wisconsin-Stout\Documents\MSCS 335\music-analysis1\testingPyTorch\first_ann.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.first_ann" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241" />
+        <option value="bundled-python-sdk-09665e90c3a7-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15026.15" />
       </set>
     </attachedChunks>
   </component>
@@ -97,32 +129,38 @@
       <option name="project" value="LOCAL" />
       <updated>1713467371033</updated>
     </task>
-    <task id="LOCAL-00003" summary="Added playlist scraping functionality">
+    <task id="LOCAL-00003" summary="example data added for initial attempt at ANN">
       <option name="closed" value="true" />
-      <created>1713808427306</created>
+      <created>1713843516046</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1713808427306</updated>
+      <updated>1713843516046</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="example data added for initial attempt at ANN">
+      <option name="closed" value="true" />
+      <created>1713843899828</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713843899828</updated>
+    </task>
+    <task id="LOCAL-00005" summary="a first attempt with ANN using the MNIST dataset">
+      <option name="closed" value="true" />
+      <created>1713847523429</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713847523429</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="more changes" />
-    <MESSAGE value="Added playlist scraping functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added playlist scraping functionality" />
+    <MESSAGE value="example data added for initial attempt at ANN" />
+    <MESSAGE value="a first attempt with ANN using the MNIST dataset" />
+    <option name="LAST_COMMIT_MESSAGE" value="a first attempt with ANN using the MNIST dataset" />
   </component>
 </project>
