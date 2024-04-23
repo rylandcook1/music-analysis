@@ -72,10 +72,11 @@ def train_single_epoch(model, data_loader, loss_fn, optimiser, device):
 # running through the training process epochs number of times
 def train(model, data_loader, loss_fn, optimiser, device, epochs):
     for i in range(epochs):
-        print(f"Epoch {i+1}")
+        print(f"Epoch {i + 1}")
         train_single_epoch(model, data_loader, loss_fn, optimiser, device)
         print("---------------------------")
     print("Finished training")
+
 
 # driving code
 if __name__ == "__main__":
