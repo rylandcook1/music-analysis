@@ -1,7 +1,6 @@
 from moviepy.video.io.VideoFileClip import VideoFileClip
 from pytube import YouTube, Playlist
 import os
-import time
 
 
 def downloadVideo(playlist_videos, genre):
@@ -28,20 +27,14 @@ def downloadVideo(playlist_videos, genre):
         count1 += 1
 
 
-
-
 def extract_urls(playlist):
     urls = []
-
     playlist_urls = Playlist(playlist)
     for url in playlist_urls:
         urls.append(url)
-
     return urls
 
 
-playlist = 'https://www.youtube.com/watch?v=kXYiU_JCYtU&list=PLyORnIW1xT6wFALM5dZlkFhOULbToFok3'
+playlist = 'https://www.youtube.com/watch?v=JGwWNGJdvx8&list=PLMC9KNkIncKvYin_USF1qoJQnIyMAfRxl'
 pl_urls = extract_urls(playlist)
-downloadVideo(pl_urls, 'rock')
-
-
+downloadVideo(pl_urls, 'pop')
