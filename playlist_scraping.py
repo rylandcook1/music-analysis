@@ -4,7 +4,7 @@ import os
 
 
 def downloadVideo(playlist_videos, genre):
-    count1 = 0
+    count1 = 71
     count2 = 0
     for url in playlist_videos:
         yt = YouTube(url)
@@ -14,7 +14,7 @@ def downloadVideo(playlist_videos, genre):
 
         # Load the mp4 file
         video = VideoFileClip(new_name + '.mp4')
-        start = video.duration / 3
+        start = 2 * video.duration / 3
         end = start + 15
 
         # Extract audio from video
@@ -35,6 +35,6 @@ def extract_urls(playlist):
     return urls
 
 
-playlist = 'https://www.youtube.com/watch?v=JGwWNGJdvx8&list=PLMC9KNkIncKvYin_USF1qoJQnIyMAfRxl'
+playlist = 'https://www.youtube.com/watch?v=xnKhsTXoKCI&list=PLhQCJTkrHOwSX8LUnIMgaTq3chP1tiTut'
 pl_urls = extract_urls(playlist)
-downloadVideo(pl_urls, 'pop')
+downloadVideo(pl_urls, 'metal')
