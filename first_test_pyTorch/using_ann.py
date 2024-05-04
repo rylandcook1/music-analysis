@@ -39,7 +39,7 @@ if __name__ == "__main__":
     _, validation_data = download_mnist_datasets()
 
     # get a testing sample from the validation dataset for inference
-    input, target = validation_data[3][0], validation_data[3][1]
+    input, target = validation_data[44][0], validation_data[44][1]
 
     # make an inference
     predicted, expected = predict(feed_forward_net, input, target, class_mapping)
