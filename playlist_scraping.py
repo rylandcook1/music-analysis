@@ -42,6 +42,6 @@ def run_scraper(playlist_url, genre):
     downloadPlaylistAsAudio(pl_urls, genre)
 
 
-run_scraper('https://www.youtube.com/watch?v=XXYlFuWEuKI&list=PLMC9KNkIncKtPzgY-5rmhvj7fax8fdxoj', 'pop')
+run_scraper('https://www.youtube.com/watch?v=kkoT1nZOexY&list=PLBC62856C462F815A', 'country')
 
 

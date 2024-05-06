@@ -4,7 +4,7 @@ from scipy import signal
 
 # 2. Load the audio as a waveform `y`
 #    Store the sampling rate as `sr`
-y, sr = librosa.load('rock/rock_0.mp3', mono=False)
+y, sr = librosa.load('music/rock_0.mp3', mono=False)
 
 D_stereo = librosa.stft(y)
 S_stereo = np.abs(D_stereo)
