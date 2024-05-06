@@ -1,8 +1,10 @@
 from pathlib import Path
 import librosa
+import numpy as np
 import pandas as pd
 import torch
 import torchaudio
+import matplotlib.pyplot as plt
 from torch.utils.data import Dataset
 
 genres = [
@@ -80,6 +82,47 @@ class CustomSongDataset(Dataset):
             mySignal = torch.nn.functional.pad(mySignal, last_dim_padding)
         return mySignal
 
+    def plot_waveform(self, index, xlim=None, ylim=None):
+        audio_sample_path = self.get_audio_sample_path(index)
+        waveform, sample_rate = load_audio(audio_sample_path,
+                                           self.target_sample_rate,
+                                           True)
+
+        num_channels, num_frames = waveform.shape
+        time_axis = torch.arange(0, num_frames) / sample_rate
+
+        figure, axes = plt.subplots(num_channels, 1)
+        if num_channels == 1:
+            axes = [axes]
+        for c in range(num_channels):
+            axes[c].plot(time_axis, waveform[c], linewidth=1)
+            axes[c].grid(True)
+            if num_channels > 1:
+                axes[c].set_ylabel(f'Channel {c + 1}')
+            if xlim:
+                axes[c].set_xlim(xlim)
+            if ylim:
+                axes[c].set_ylim(ylim)
+        figure.suptitle(f"Sample {index} Waveform")
+        plt.show()
+
+    def plot_melspectrogram(self, index, ylabel="freq_bin", ax=None):
+        audio_sample_path = self.get_audio_sample_path(index)
+        initial, sr = librosa.load(audio_sample_path,
+                                   sr=self.target_sample_rate,
+                                   mono=True)
+        S = librosa.feature.melspectrogram(y=initial,
+                                           sr=sr,
+                                           n_fft=1024,
+                                           hop_length=512,
+                                           n_mels=64)
+        S_dB = librosa.power_to_db(S, ref=np.max)
+        plt.figure(figsize=(10, 4))
+        librosa.display.specshow(S_dB, x_axis='time', y_axis='mel', sr=sr)
+        plt.colorbar(format='%+2.0f dB')
+        plt.title(f"Sample {index} Mel Spectrogram")
+        plt.show()
+
 
 if __name__ == "__main__":
     ANNOTATION_FILE = Path.cwd().joinpath("annotation.csv")  # path of annotation file, in the working directory
@@ -100,5 +143,5 @@ if __name__ == "__main__":
                                       SAMPLE_RATE,
                                       NUM_SAMPLES)
     print(f"There are {len(songs_dataset)} samples in the dataset.")
-    signal, label = songs_dataset[300]
-    print(signal)
+    songs_dataset.plot_waveform(24)
+    songs_dataset.plot_melspectrogram(24)

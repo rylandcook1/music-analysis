@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35b53b72-4aac-4b95-9899-6e95c52a1767" name="Changes" comment="annotation file creator corresponding to dataset">
-      <change afterPath="$PROJECT_DIR$/neuralNetwork.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/training.py" afterDir="false" />
+    <list default="true" id="35b53b72-4aac-4b95-9899-6e95c52a1767" name="Changes" comment="got all 5 files working for data loading, training, and a (badly functioning) neural network">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/audioDataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/audioDataset.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first_test_pyTorch/feedforwardnet.pth" beforeDir="false" afterPath="$PROJECT_DIR$/first_test_pyTorch/feedforwardnet.pth" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first_test_pyTorch/using_ann.py" beforeDir="false" afterPath="$PROJECT_DIR$/first_test_pyTorch/using_ann.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,27 +52,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Doctests in functional.executor": "Debug",
-    "Python.ANN1.executor": "Run",
-    "Python.ANN2.executor": "Run",
-    "Python.annotationCreator.executor": "Run",
-    "Python.audioDataset.executor": "Run",
-    "Python.dataloader.executor": "Debug",
-    "Python.first_ann.executor": "Run",
-    "Python.neuralNetwork.executor": "Run",
-    "Python.playlist_scraping.executor": "Run",
-    "Python.predict_cnn.executor": "Run",
-    "Python.pyTorch_and_torchaudio.executor": "Debug",
-    "Python.test.executor": "Run",
-    "Python.training.executor": "Run",
-    "Python.using_ann.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "nathaen"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Doctests in functional.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.ANN1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ANN2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.annotationCreator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.audioDataset.executor&quot;: &quot;Run&quot;,
+    &quot;Python.dataloader.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.first_ann.executor&quot;: &quot;Run&quot;,
+    &quot;Python.neuralNetwork.executor&quot;: &quot;Run&quot;,
+    &quot;Python.playlist_scraping.executor&quot;: &quot;Run&quot;,
+    &quot;Python.predict_cnn.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pyTorch_and_torchaudio.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.training.executor&quot;: &quot;Run&quot;,
+    &quot;Python.using_ann.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;nathaen&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\WantaNathaen\OneDrive - University of Wisconsin-Stout\Documents\MSCS 335\music-analysis1\first_test_pyTorch" />
@@ -256,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714749887419</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="got all 5 files working for data loading, training, and a (badly functioning) neural network">
+      <option name="closed" value="true" />
+      <created>1714806308785</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1714806308785</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -272,6 +276,7 @@
     <MESSAGE value="fixed some formatting warnings" />
     <MESSAGE value="dataset creator file using torchaudio" />
     <MESSAGE value="annotation file creator corresponding to dataset" />
-    <option name="LAST_COMMIT_MESSAGE" value="annotation file creator corresponding to dataset" />
+    <MESSAGE value="got all 5 files working for data loading, training, and a (badly functioning) neural network" />
+    <option name="LAST_COMMIT_MESSAGE" value="got all 5 files working for data loading, training, and a (badly functioning) neural network" />
   </component>
 </project>
