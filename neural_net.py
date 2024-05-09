@@ -3,6 +3,12 @@ from torchsummary import summary
 
 class CNNNetwork(nn.Module):
     def __init__(self):
+        """
+        Initialize the CNNNetwork class.
+
+        The network consists of 4 convolutional blocks followed by a flatten layer,
+        and a fully connected linear layer for classification.
+        """
         super().__init__()
         # 4 convolutional blocks / flatten / linear / softmax
         self.conv1 = nn.Sequential(
@@ -26,19 +32,29 @@ class CNNNetwork(nn.Module):
             nn.MaxPool2d(kernel_size=2)
         )
         self.flatten = nn.Flatten()
-        self.linear = nn.Linear(26880, 5)
-        self.softmax = nn.Softmax(dim=1)
+        self.linear = nn.Linear(26880, 5)  # 26880 = 128 * 5 * 44 (output size after max pooling)
 
     def forward(self, input_data):
+        """
+        Forward pass through the CNNNetwork.
+
+        Args:
+        - input_data: Input data tensor.
+
+        Returns:
+        - logits: Output logits tensor.
+        """
         X = self.conv1(input_data)
         X = self.conv2(X)
         X = self.conv3(X)
         X = self.conv4(X)
         X = self.flatten(X)
         logits = self.linear(X)
-        #predictions = self.softmax(logits)
         return logits
 
 if __name__ == "__main__":
+    # Create an instance of the CNNNetwork
     cnn = CNNNetwork()
-    summary(cnn, (1, 64, 44))
+
+    # Print model summary
+    summary(cnn, (1, 64, 44))  # Input shape: (channels, height, width)
